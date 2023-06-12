@@ -1,0 +1,137 @@
+.post {
+	background: var(--gray-900);
+	border-radius: 8px;
+	/* padding: 4.5rem; */
+}
+
+.post + .post {
+  margin-top: 2rem;
+}
+
+.article {
+	background: var(--gray-600);
+	margin-bottom: 1rem;
+}
+
+.content {
+	margin-top: 2rem;
+	margin-left: 1rem;
+	line-height: 1.6;
+	color: var(--gray-300);
+    
+}
+
+.content a {
+	font-weight: bold;
+	color: var(--green-500);
+	text-decoration: none;
+}
+
+.content a:hover {
+  color: var(--green-300);
+}
+
+/* The > is to style the first header tag only*/
+.post > header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* .post > header time {
+    font-size: 0.575rem;
+    color: var(--gray-400);
+} */
+
+.time {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+	margin-left: 92%;
+}
+
+.author {
+	display: flex;
+	align-items:initial;
+	gap: 1rem;
+}
+
+/* Removido depois da criação do Avatar.jsx etc...
+	
+	.author img {
+	width: calc(3rem + 12px);
+	height: calc(3rem + 12px);
+	border-radius: 8px;
+	border: 4px solid var(--gray-800);
+	outline: 2px solid var(--green-500);
+	margin: 1rem 0rem 1rem 1rem;    
+} */
+
+.authorInfo strong {
+	display: block;
+	color: var(--gray-100);
+	line-height: 1.6;
+}
+
+.authorInfo span {
+	display: block;
+	font-size: 0.875rem;
+	color: var(--gray-200);
+	line-height: 1.6;
+}
+
+.commentForm {
+	/* margin: 1rem 0.15rem 0.15rem 1rem; */
+	margin-left: 1rem;
+	margin-right: 1rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--gray-600);
+}
+
+.commentForm > strong {
+	line-height: 1.6;
+	color: var(--gray-100);    
+}
+
+.commentForm textarea {
+	width: 50rem;
+	background: var(--gray-800);
+	border: 0;
+	resize: none;
+	height: 6rem;
+	padding: 1rem;
+	border-radius: 8px;
+	color: var(--gray-100);
+	line-height: 1.4;
+	margin-top: 1rem;
+}
+
+.commentForm footer {
+	visibility: hidden;
+	max-height: 0;
+}
+
+.commentForm:focus-within footer {
+	visibility: visible;
+	max-height: none;
+}
+
+.commentForm button {
+	padding: 0.5rem 1rem;
+	margin-top: 1rem;
+	margin-bottom: 3rem;
+	border-radius: 6px;
+	border: 0;
+	background: var(--green-500);
+	color: var(--white);
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.1s;
+}
+
+.commentForm button[type=submit]:hover {
+  background: var(--green-300);
+}
+
+.commentList {
+	margin-top: 2rem;
+}
