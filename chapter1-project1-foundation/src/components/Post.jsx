@@ -21,10 +21,9 @@ export function Post({author, publishedAt, content}) {
 	})
 
 	function handleCreateNewComment() {
-
 		event.preventDefault()
 
-		const newCommentText = event.target.comment//.value
+		const newCommentText = event.target.comment.value
 
 		setComments([...comments, newCommentText]);
 
@@ -66,7 +65,7 @@ export function Post({author, publishedAt, content}) {
 
 			<form onSubmit={handleCreateNewComment} className={styles.commentForm}>
 				<strong>Leave your feedback:</strong>
-				<textarea placeholder='Leave your feedback' />
+				<textarea name="comment" placeholder='Leave your feedback' />
 				<button type='submit'>Send</button>
 			</form>
 
